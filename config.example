@@ -1,0 +1,32 @@
+# IP Updater Configuration
+# Copy this file to 'config' and customize for your setup
+
+# FIREWALLS - Space-separated list of firewall configurations
+# Format: "firewall_id:mode:ports"
+#
+# firewall_id: Your Digital Ocean firewall UUID
+#              Find with: doctl compute firewall list
+#
+# mode: How to handle IP updates
+#   swap        - Only replaces YOUR old IP with the new IP
+#                 Other IPs in the rule are preserved
+#                 Use this for shared firewalls where others have static IPs
+#
+#   replace_all - Replaces ALL IPs on the specified ports with your new IP
+#                 Use this for personal/dev firewalls where only you need access
+#
+# ports: Comma-separated list of ports to update (no spaces)
+#        Examples: "22" or "22,80,443"
+#
+# Examples:
+#
+# Production server - only update port 22, preserve other admin IPs:
+# FIREWALLS="abc12345-1234-5678-90ab-cdef12345678:swap:22"
+#
+# Dev server - update ports 22, 80, 443, replace all IPs:
+# FIREWALLS="def67890-1234-5678-90ab-cdef12345678:replace_all:22,80,443"
+#
+# Multiple firewalls:
+# FIREWALLS="abc12345-...:swap:22 def67890-...:replace_all:22,80,443"
+
+FIREWALLS=""

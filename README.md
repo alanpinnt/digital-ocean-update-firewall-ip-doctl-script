@@ -1,4 +1,4 @@
-# Digital Ocean Firewall IP Updater
+# digital-ocean-update-firewall-ip-doctl-script
 
 A bash script that automatically updates Digital Ocean firewall rules when your external IP changes. Designed for dynamic IP environments where you need to maintain firewall access without manual intervention.
 
